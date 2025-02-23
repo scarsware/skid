@@ -1252,7 +1252,8 @@ do
                 wait(0.2);
 
                 local Event;
-                Event = InputService.InputBegan:Connect(function(Input)
+                Event = InputService.InputBegan:Connect(function(Input, gameProcessed)
+                    if not gameProcessed then return end
                     local Key;
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
