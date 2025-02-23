@@ -585,15 +585,15 @@ end)
 
 local killSayEnabled = false
 local killSayMessages = {
-    "mad.lol is a free script and u die to it..", 
-    "Must be hard without mad.lol 💔", 
-    "Why aim when mad.lol does it for you?",
-    "Bros not on mad.lol already 😂",
+    "ur buns", 
+    "mfvo owns you 💔", 
+    "get aim nerd",
+    "@mfvo",
     "Cant be me icl",
-    "cant win a hvh? maybe try /madlolhvh",
-    "if u wanna win hop in /madlolhvh",
-    "hey come on if u cant win get mad . lol",
-    "how to win a hvh? step 1 get mad . lol"
+    "cant win a hvh? maybe try @mfvo",
+    "if u wanna win hop in @mfvo",
+    "hey come on if u cant win get this script",
+    "how to win a hvh? step 1 add @mfvo"
 }
 
 TargetingGroup:AddToggle("killsay", { 
@@ -2497,10 +2497,10 @@ function toggleDesync(state)
     desync.enabled = state
     if desync.enabled then
         workspace.CurrentCamera.CameraSubject = desync_setback
-        Library:Notify("Desync Enabled '" .. desync.mode .. "' Mad.lol $", 2)
+        Library:Notify("Desync Enabled '" .. desync.mode .. "' @mfvo", 2)
     else
         resetCamera()
-        Library:Notify("Desync Disabled '" .. desync.mode .. "' Mad.lol  $", 2)
+        Library:Notify("Desync Disabled '" .. desync.mode .. "' @mfvo", 2)
     end
 end
 
@@ -3419,7 +3419,7 @@ local webhook = Modifications:AddButton('Redeem Codes', function()
 
    for _, code in pairs(codes) do
        mainEvent:FireServer("EnterPromoCode", code)
-       Library:Notify("Trying code: " .. code .. " mad.lol | Private", 5)
+       Library:Notify("Trying code: " .. code .. " @mfvo | Private", 5)
        task.wait(4.2)
    end
 end)
@@ -4219,7 +4219,7 @@ getgenv().PlayerActions:AddButton('Execute Action', function()
                 voidTarget(targetPlayer)
             end
         else
-            Library:Notify("Equip a tool to use this function. | Mad.lol", 5)
+            Library:Notify("Equip a tool to use this function. | @mfvo", 5)
         end
     end
 end)
@@ -4685,7 +4685,7 @@ local WatermarkConnection = RunService.RenderStepped:Connect(function()
     local UptimeFormatted = string.format("%02d:%02d", math.floor(Uptime / 60), Uptime % 60)
     local GameName = getGameName(game.PlaceId)
 
-    Library:SetWatermark(("[ Mad.lol ] | $ Beta $ |  %s | %s (%d) | Uptime: %s | FPS %d | %d ms"):format(
+    Library:SetWatermark(("[ @mfvo ] | own nns |  %s | %s (%d) | Uptime: %s | FPS %d | %d ms"):format(
         Executor, GameName, game.PlaceId, UptimeFormatted, math.floor(FPS), Ping
     ))
 end)
