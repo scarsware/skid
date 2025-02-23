@@ -1254,7 +1254,7 @@ do
                 local Event;
                 Event = InputService.InputBegan:Connect(function(Input, gameProcessed)
                     if not gameProcessed then return end
-                    local Key;
+                        local Key;
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
                         Key = Input.KeyCode.Name;
