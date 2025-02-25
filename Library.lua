@@ -1253,7 +1253,6 @@ do
 
                 local Event;
                 Event = InputService.InputBegan:Connect(function(Input, gameProcessed)
-                    if not gameProcessed then return end
                     local Key;
 
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
@@ -1315,7 +1314,8 @@ do
             end;
         end))
 
-        Library:GiveSignal(InputService.InputEnded:Connect(function(Input)
+        Library:GiveSignal(InputService.InputEnded:Connect(function(Input, gameProcess)
+            if not gameProcess then return end
             if (not Picking) then
                 KeyPicker:Update();
             end;
